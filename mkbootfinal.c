@@ -7,7 +7,7 @@
 
 void wrt(char *name, char *ptr, int len)
 {
-    int ofd = open(name, O_WRONLY | O_CREAT, 0660);
+    int ofd = open(name, O_WRONLY | O_CREAT | O_TRUNC, 0660);
     write(ofd, ptr, len);
     close(ofd);
 }
